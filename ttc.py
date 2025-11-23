@@ -1,7 +1,7 @@
 # Pam Qian 2016 Fall CS 112 Python Midterm Project II
 # Tic Tack Toe 
 
-def main():
+def fungsiUtama():
 # The main function
     introduction = intro()
     board = create_grid()
@@ -15,9 +15,9 @@ def main():
 
 def intro():
 # This function introduces the rules of the game Tic Tac Toe
-    print("Hello! Welcome to Pam's Tic Tac Toe game!")
+    print(" Haloo ini Adlah permainan tictactoe Hasil modifikasi oleh masriadi")
     print("\n")
-    print("Rules: Player 1 and player 2, represented by X and O, take turns "
+    print("Aturan : Pemain 1 dan 2 harus memiilih X Dan 0    Rules: Player 1 "
           "marking the spaces in a 3*3 grid. The player who succeeds in placing "
           "three of their marks in a horizontal, vertical, or diagonal row wins.")
     print("\n")
@@ -26,41 +26,41 @@ def intro():
 
 
 
-def create_grid():
+def grid_papan():
 # This function creates a blank playboard
-    print("Here is the playboard: ")
-    board = [[" ", " ", " "],
+    print("Papan Tictactoe: ")
+    papan = [[" ", " ", " "],
              [" ", " ", " "],
              [" ", " ", " "]]        
-    return board
+    return papan
 
 
 
-def sym():
+def simbol():
 # This function decides the players' symbols
-    symbol_1 = input("Player 1, do you want to be X or O? ")
+    symbol_1 = input("Pemain 1 , pilih X atau O ,?")
     if symbol_1 == "X":
         symbol_2 = "O"
-        print("Player 2, you are O. ")
+        print("untuk pemain ke 2 kau adalah simbol O ")
     else:
         symbol_2 = "X"
         print("Player 2, you are X. ")
-    input("Press enter to continue.")
+    input("Enter untuk memulai.")
     print("\n")
     return (symbol_1, symbol_2)
 
 
 
-def startGamming(board, symbol_1, symbol_2, count):
+def memulaiPermainan(papan, symbol_1, symbol_2, count):
 # This function starts the game.
 
     # Decides the turn
     if count % 2 == 0:
-        player = symbol_1
+        pemain = symbol_1
     elif count % 2 == 1:
-        player = symbol_2
-    print("Player "+ player + ", it is your turn. ")
-    row = int(input("Pick a row:"
+        pemain = symbol_2
+    print("Player "+ pemain + ", selanjutnya anda menurunkan : . ")
+    row = int(input("pilih baris : "
                     "[upper row: enter 0, middle row: enter 1, bottom row: enter 2]:"))
     column = int(input("Pick a column:"
                        "[left column: enter 0, middle column: enter 1, right column enter 2]"))
@@ -179,7 +179,7 @@ def isWinner(board, symbol_1, symbol_2, count):
     
 
 
-def illegal(board, symbol_1, symbol_2, row, column):
+def illegal(papan, symbol_1, symbol_2, row, column):
     print("The square you picked is already filled. Pick another one.")
 
     
@@ -193,7 +193,7 @@ def report(count, winner, symbol_1, symbol_2):
     else:
         print("There is a tie. ")
 
-# Call Main
-main()
+# Mngembalikan Fungsi Utama
+fungsiUtama()
 
     
