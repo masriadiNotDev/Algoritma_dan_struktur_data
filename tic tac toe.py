@@ -1,5 +1,6 @@
 #tictactoe 
 #MASRIADI SISTEM INFORMASI
+#nim D0425309
 #hasiyl modifikasi dari program tictactoe dasar
 #tambahan popup messagebox dari tkinter dan tambahan tombol untuk mengakhiri program
 #perubahan warna dan posisi tombol
